@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treasure Hunt 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1 class="title">Treasure Hunt 2026</h1>
+            <div class="divider">
+                <span class="crossbones">☠️</span>
+            </div>
+        </header>
+
+        <main id="game-area">
+            <!-- Dynamic Content Load Here -->
+            <div id="question-container" class="fade-in">
+                <h2 id="round-indicator">Loading...</h2>
+                <p id="question-text"></p>
+            </div>
+
+            <div id="error-message" class="hidden">
+                <h2>Invalid QR Code</h2>
+                <p>Please scan a valid treasure hunt QR code.</p>
+            </div>
+
+            <form id="treasure-form" class="hidden">
+                <div class="input-group">
+                    <label for="team-name">Team Name</label>
+                    <input type="text" id="team-name" placeholder="Enter your crew's name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="answer">Your Answer</label>
+                    <input type="text" id="answer" placeholder="Type the secret answer..." autocomplete="off" required>
+                </div>
+
+                <button type="submit" id="submit-btn">Submit Answer</button>
+            </form>
+
+            <div id="success-message" class="hidden fade-in">
+                <h2>Answer recorded successfully</h2>
+                <p>Proceed to the next clue, matey!</p>
+            </div>
+        </main>
+        
+        <footer>
+            <p>&copy; 2026 College Event Committee</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
